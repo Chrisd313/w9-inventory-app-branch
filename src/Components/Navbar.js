@@ -4,6 +4,8 @@ export default function Navbar() {
         <ul>
             <li>
                 <a href="/home">Home</a>
+            </li>
+            <li>
                 <a href="/create item">Create item</a>
             </li>
         </ul>
