@@ -1,11 +1,11 @@
+const {seed} = require('../server/seed')
 const express = require('express')
-const {db} = require('../db')
+const {itemsRt, userRt} = require('../routers')
 const app = express()
-const {Items} = require('../models')
-const {itemsRt} = require('../route')
+
+seed()
 
 
 app.use(express.json())
-app.use('/items, itemsRt')
-
-// does this work!
+app.use('/items', itemsRt)
+app.use('/user', userRt)
