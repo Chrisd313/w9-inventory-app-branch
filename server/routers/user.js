@@ -14,4 +14,4 @@ userRt.get('/', (req, res) => {
 
 
 
-module.exports = {userRt}
+module.exports = userRt

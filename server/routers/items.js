@@ -36,4 +36,4 @@ itemsRt.get('/', (req, res) => {
 // })
 
 
-module.exports = {itemsRt}
+module.exports = itemsRt

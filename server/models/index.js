@@ -1,7 +1,8 @@
-const {User} = require('./User')
-const {Items} = require('./Items')
+const {Sequelize} = require('sequelize')
+const {sequelize} = require('../db')
+const {Item} = require('./items');
 
-// items.belongsTo(User)
-// user.hasMany(Items)
-
-module.exports = {Items, User};
+module.exports = {
+  db: sequelize,
+  Item,
+};

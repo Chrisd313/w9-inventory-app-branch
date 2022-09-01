@@ -1,5 +1,7 @@
-const {DataTypes, db} = require('../db') /* this might need to change depending on file path */
+const {Sequelize, DataTypes, db} = require('sequelize') /* this might need to change depending on file path */
 const {sequelize} = require('../db')
+
+
 
 const Items = sequelize.define('items', {
     title: DataTypes.STRING,
@@ -9,4 +11,4 @@ const Items = sequelize.define('items', {
     image: DataTypes.STRING,
 });
 
-module.exports = {Items};
+module.exports = Items;
