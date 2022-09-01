@@ -1,19 +1,24 @@
-// import logo from './logo.svg';
-import {Switch, Route, Routes, BrowserRouter, Redirect, withRouter, NavLink, Link} from 'react-router-dom';
 import Navbar from './Navbar';
-
-import '..';
+import Home from './Home';
+import Create from './CreateForm';
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    
-    <div className="App">
+    <>
       <Navbar />
-      <h1>HELLO WORLD!</h1>
-    </div>
-  );
+      <div className="container">
+        <Routes>
+          <Route path="/" element ={<Home />} />
+          <Route path="/createitem" element ={<Create />} />
+        </Routes>
+      </div>
+    </>
+  )
 }
 
 
 
 export default App;
+
+ 

@@ -21,16 +21,13 @@ code {
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
-  height: 80px;
+  /* height: 80px; */
 }
 
-.nav a {
-  color: inherit;
-  text-decoration: none;
-}
+
 
 .site-title {
   font-size: 2rem;
@@ -42,4 +39,90 @@ code {
   list-style: none;
   display: flex;
   gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li.active {
+  color: rgb(255, 174, 0);
+}
+
+.nav li:hover {
+  color: #888;
+}
+
+.wrapper {
+  margin: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 0 10px 5px #999;
+  border-radius: 0.2rem;
+  min-width: 28rem;
+  display: flex;
+
+  
+}
+
+.card_img{
+  max-width: 12rem;
+  min-width: 12rem;
+  height: 100%;
+  object-fit:cover;
+  padding: 20px;
+}
+
+.card_body{
+  margin: 1rem;
+}
+
+.card_title{
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card_description {
+  line-height: 1.2rem;
+}
+
+.card_price{
+  font-size: 1.4rem;
+  margin-top:0.6rem
+}
+
+.card_price::before{
+  content:"£";
+  font-size: 1rem;
+  position: relative;
+  top:-0.3rem;
+  padding-right: 0.1rem;
+}
+
+.card_button{
+  border: none;
+  border-top: 1px solid grey;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 200px;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  
+}
+
+.card_button:hover{
+  color: rgb(255, 174, 0);
 }
