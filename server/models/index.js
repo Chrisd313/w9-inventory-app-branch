@@ -1,6 +1,6 @@
 const {Sequelize} = require('sequelize')
 const {sequelize} = require('../db')
-const {Item} = require('./items');
+const {Item} = require('./Item');
 
 module.exports = {
   db: sequelize,

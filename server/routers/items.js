@@ -1,6 +1,6 @@
 const express = require('express')
 const itemsRt = express.Router()
-const {Items} = require('../models/')
+const {Item} = require('../models/')
 
 
 // TEST
@@ -9,10 +9,15 @@ itemsRt.get('/', (req, res) => {
 })
 
 
-// // Get All Items
-// itemsRt.get('/getallitems', (req, res) => {
-//     res.send(items)
-// })
+// Get All Items
+itemsRt.get('/getallitems', async (req, res, next) => {
+    try {
+        const items = Item.findAll()
+        res.send(items)
+    } catch (error) {
+       next(error)
+    }
+})
 
 
 // // Get One Item

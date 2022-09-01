@@ -3,7 +3,7 @@ const {sequelize} = require('../db')
 
 
 
-const Items = sequelize.define('items', {
+const Item = sequelize.define('items', {
     title: DataTypes.STRING,
     price: DataTypes.NUMBER,
     description: DataTypes.STRING,
@@ -11,4 +11,4 @@ const Items = sequelize.define('items', {
     image: DataTypes.STRING,
 });
 
-module.exports = Items;
+module.exports = Item;
